@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Lego Primes</title>
+        <meta name="description" content="Lego is for Lads">
+        <link rel="stylesheet" href="_styles/main.css">
+        <script src="_scripts/lego.js"></script>
+        <script src="_scripts/primeFactorisation.js"></script>
+        <script src="_scripts/build.js"></script>
+        <script src="_scripts/question1.js"></script>
+        <script src="_scripts/question2.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.2.5/math.js"></script>
+    </head>
+    <body>
+        
+        <h1>Lego Primes</h1>
+        <h2>Building numbers lets you understand numbers.</h2>
+        
+        <p>
+            Welcome to Lego Primes. Here we will be taking a different look at numbers. We will build unique Lego constructions for numbers. By looking at numbers in a different way we will get a deeper understanding of number and functions on numbers.
+        </p>
+        
+        <p>
+            Enter two integers between 2 and 1 000 000 to create Lego contructions.
+        </p>
+
+
+        <form id="form" onsubmit="return false;">
+            <h3>First Number</h3>
+            <input type="number" id="number1" value="420" /><br>
+            <h3>Second Number</h3>
+            <input type="number" id="number2" value="540" /><br>
+            <input id="legobutton" type="button" value="Lego" onclick="lego_btn(document.getElementById('number1').value, document.getElementById('number2').value)"/>
+        </form>
+
+        <br>
+
+        <div id="buildArea"></div>
+
+        <div id="questions">    
+        <h3>Question 1</h3>
+        <p>What is the smallest set of blocks required if you were asked to build either one of the lego constructions above?</p>
+        <input id="q1button" type="button" value="Solution" onclick="lego_q1(document.getElementById('number1').value, document.getElementById('number2').value)"/>
+        <br>
+        <br>
+        <div id="buildAreaQ1"></div>
+
+        
+        <h3>Question 2</h3>
+        <p>What is the largest common lego construction that you could build with blocks from either of the lego constructions above?</p>
+        <input id="q2button" type="button" value="Solution" onclick="lego_q2(document.getElementById('number1').value, document.getElementById('number2').value)"/>
+        <br>
+        <br>
+        <div id="buildAreaQ2"></div>
+
+        </div>
+
+    </body>
+</html>
+
